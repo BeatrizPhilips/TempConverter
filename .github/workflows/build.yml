@@ -7,6 +7,7 @@ jobs:
   DigaOla:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/diga-ola-action/action.yml
   Build:
     runs-on: ubuntu-latest
