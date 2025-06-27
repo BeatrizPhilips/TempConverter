@@ -10,3 +10,18 @@ jobs:
       - run: echo "Ola"
   Build:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v2
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+          
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
+    
+    - name: set Gradle Permission
+      run: chmod +x ./gradlew
+    
+    - run: ./gradlew build
