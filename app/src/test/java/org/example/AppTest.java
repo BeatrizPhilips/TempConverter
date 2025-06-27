@@ -7,8 +7,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        convertTemp converter = new convertTempToCelsius();
-        assertNotNull(converter, "app should have a greeting");
+    @Test
+    void testConvertToFahrenheit() {
+        convertTemp converter = new convertTempToFahrenheit();
+        double resultado = converter.convertTemp(0); // 0°C = 32°F
+        assertEquals(32.0, resultado, 0.001);
     }
+
+    @Test
+    void testConvertToCelsius() {
+        convertTemp converter = new convertTempToCelsius();
+        double resultado = converter.convertTemp(32); // 32°F = ~17.6°C
+        assertEquals(17.6, resultado, 0.1); // margem de erro por usar 0.55
+    }
+
+
+
 }
