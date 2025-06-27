@@ -26,11 +26,11 @@ jobs:
 
 
       # permissao da execução gradlew
-      - name: set Gradle Permission
-        run: ./.github/actions/set-permission-gradlew
+      - name: Set Gradle Permission
+        uses: ./.github/actions/set-permission-gradlew
 
       # BUILD
       - name: Build
-        run: ./.github/actions/build
+        uses: ./.github/actions/build
 
 
