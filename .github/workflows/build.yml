@@ -31,6 +31,6 @@ jobs:
 
       # BUILD
       - name: Build
-        uses: ./.github/actions/build
+        uses: ./.github/actions/build-action
 
 
