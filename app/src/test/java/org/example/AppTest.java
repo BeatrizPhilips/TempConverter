@@ -18,9 +18,7 @@ class AppTest {
     void testConvertToCelsius() {
         convertTemp converter = new convertTempToCelsius();
         double resultado = converter.convertTemp(32); // 32°F = ~17.6°C
-        assertEquals(17.6, resultado, 0.1); // margem de erro por usar 0.55
+        assertEquals(0.0, resultado, 0.001);
     }
-
-
 
 }
